@@ -1,0 +1,10 @@
+<Context>
+  <Resource
+    name="jdbc_book"
+    auth="Container"
+    type="javax.sql.DataSource"
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://db:3306/book"
+    username="root"
+    password="admin" />
+</Context>
