@@ -14,8 +14,10 @@ public class XSS extends HttpServlet {
 
 		String message = request.getParameter("message");
 
-    StringBuilder body = new StringBuilder();
-    body.append(message);
+    // StringBuilder body = new StringBuilder();
+    // body.append(message);
+
+    request.setAttribute("message", message);
 
     RequestDispatcher dis = request.getRequestDispatcher("xss.jsp");
     dis.forward(request, response);

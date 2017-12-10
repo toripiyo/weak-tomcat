@@ -9,5 +9,8 @@
 <br>
 <input type="submit" value="Submit">
 </form>
+<c:if test="${empty message}">
+  ${message}
+</c:if>
 </section>
 </div>

@@ -30,6 +30,13 @@ public class Injection extends HttpServlet {
       Statement stmt = con.createStatement();
       ResultSet result = stmt.executeQuery("select * from books;");
 
+      List<Book> books = new ArrayList<Book>();
+
+      while (resultSet.next()) {
+        Book book = new Book();
+        book.setTitle(resultSet.getString("title"));
+      }
+
       request.setAttribute("result", result);
       request.setAttribute("message", "test message");
 

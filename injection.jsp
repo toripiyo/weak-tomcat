@@ -10,15 +10,17 @@
 <input type="submit" value="Submit">
 </form>
 </section>
-<div><%= request.getAttribute("message") %></div>
-<div><%= request.getAttribute("result") %></div>
+<%-- <div><%= request.getAttribute("message") %></div>
+<div><%= request.getAttribute("result") %></div> --%>
 <%-- <div><%= request.getAttribute("result").getRow() %></div> --%>
-<%
-  ResultSet result = request.getAttribute("result");
-%>
-
+<c:if test="${empty result}">
+${result}
+</c:if>
 <section>
-<table border="1">
+<%-- <table border="1"> --%>
+  <%-- <table>
+  <tr><td>aaa</td><td>bbb</td></tr>
+</table> --%>
 <%-- <%
     while (request.getAttribute("result").next()) {
 %>
@@ -31,6 +33,6 @@
 <%
     }
 %> --%>
-</table>
+<%-- </table> --%>
 </section>
 </div>
